@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<body>
+	<div id="container" >  
+	    <fieldset >  
+	        <form name="form1" style="margin-left:100px;line-height:60px;" enctype="multipart/form-data" action="upload.php" method="post">  
+			请选择上传文件： <br>  
+	    		<input name="upload_file" type="file" id="fileToUpload"><br><br>
+	    		<input id="postBtn" type="submit" value="上传文件">  
+			</form>   
+	        <div id="info" style="margin-left:100px;line-height:60px;"></div>      
+	    </fieldset>  
+	</div>  
+</body>
+</html>	
+<script src="jquery.js"></script>
+
+<script type="text/javascript">  
+    $('#postBtn').click(function(){  
+        
+        var s=document.form1.upload_file.value;
+        if(s == ""){  
+            $('#info').html("亲，您还没选择上传文件呢！");  
+            return false;  
+        }
+    })   
+</script>  
